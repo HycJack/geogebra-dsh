@@ -1,0 +1,9 @@
+# 开发过程中的工作笔记 —— 不随插件分发
+AGENTS.md
+docs/
+
+# macOS
+.DS_Store
+
+# 依赖（本插件没有运行时依赖，留着以防万一）
+node_modules/

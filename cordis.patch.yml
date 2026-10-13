@@ -1,0 +1,7 @@
+# geogebra-dsh · host bundle patch
+#
+# Mounts the host half. The browser half is discovered through the package's
+# dsh.client manifest and its ./client export, exactly as ds-bot does it.
+- insert:
+    - id: geogebra-dsh
+      name: 'geogebra-dsh'

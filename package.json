@@ -1,0 +1,31 @@
+{
+  "name": "geogebra-dsh",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small DSH panel: a sidebar entry that lists recent conversations and jumps to them",
+  "type": "module",
+  "main": "./src/host/index.js",
+  "exports": {
+    ".": { "default": "./src/host/index.js" },
+    "./client": { "default": "./lib/client.js" },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "meta": {
+      "title": "GeoGebra",
+      "description": "Embed a local GeoGebra applet in the right sidebar, driven by tools"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    }
+  }
+}

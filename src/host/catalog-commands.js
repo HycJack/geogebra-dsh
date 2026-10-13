@@ -1,0 +1,113 @@
+// GeoGebra's own command names, and the app-parameter reference.
+//
+// COMMANDS is the authoritative list: 549 names extracted from GeoGebra's own
+// source (org.geogebra.common.kernel.commands.Commands), deduplicated
+// case-insensitively. Matching upper-cases both sides, because GeoGebra's own
+// spelling is the only one this file keeps (SXX vs Sxx, PolyLine vs Polyline are
+// one command).
+//
+// It lives here, embedded, so command validation costs no network round trip and
+// works offline — which is the whole point of embedding a local GeoGebra build.
+// Regenerate from a newer GeoGebra by re-extracting that enum; the count below is
+// asserted against the source list.
+
+/** How many names COMMANDS should hold; a drift means the list was edited by hand. */
+export const COMMAND_COUNT = 549
+
+export const COMMANDS = [
+  'AffineRatio', 'Angle', 'AngleBisector', 'AngularBisector', 'ANOVA', 'Append',
+  'ApplyMatrix', 'Arc', 'Area', 'AreCollinear', 'AreConcurrent', 'AreConcyclic',
+  'AreCongruent', 'AreEqual', 'AreParallel', 'ArePerpendicular', 'Assume', 'Asymptote',
+  'AttachCopyToView', 'Axes', 'AxisStepX', 'AxisStepY', 'BarChart', 'Barycenter',
+  'Bernoulli', 'BetaDist', 'BezierCurve', 'Binomial', 'BinomialCoefficient', 'BinomialDist',
+  'Bottom', 'BoxPlot', 'Button', 'CASLoaded', 'Cauchy', 'Cell',
+  'CellRange', 'Center', 'CenterView', 'Centroid', 'CFactor', 'CharacteristicPolynomial',
+  'Checkbox', 'ChiSquared', 'ChiSquaredTest', 'CIFactor', 'Circle', 'CircleArc',
+  'CircleSector', 'CircularArc', 'CircularSector', 'CircumcircleArc', 'CircumcircleSector', 'CircumcircularArc',
+  'CircumcircularSector', 'Circumference', 'Classes', 'ClosestPoint', 'ClosestPointRegion', 'Coefficients',
+  'Column', 'ColumnName', 'CommonDenominator', 'CompleteSquare', 'ComplexRoot', 'Cone',
+  'ConeInfinite', 'Conic', 'ConjugateDiameter', 'ConstructionStep', 'ContingencyTable', 'ContinuedFraction',
+  'ConvexHull', 'CopyFreeObject', 'Corner', 'CornerThreeD', 'CorrelationCoefficient', 'CountIf',
+  'Covariance', 'Cross', 'CrossRatio', 'CSolutions', 'CSolve', 'Cube',
+  'Cubic', 'Curvature', 'CurvatureVector', 'Curve', 'CurveCartesian', 'Cylinder',
+  'CylinderInfinite', 'DataFunction', 'Defined', 'Degree', 'DelaunayTriangulation', 'DelauneyTriangulation',
+  'Delete', 'Denominator', 'Derivative', 'Determinant', 'Diameter', 'Difference',
+  'Dilate', 'Dimension', 'Direction', 'Directrix', 'Distance', 'Div',
+  'Division', 'Divisors', 'DivisorsList', 'DivisorsSum', 'Dodecahedron', 'Dot',
+  'DotPlot', 'DynamicCoordinates', 'Eccentricity', 'Eigenvalues', 'Eigenvectors', 'Element',
+  'Eliminate', 'Ellipse', 'Ends', 'Envelope', 'Erlang', 'Evaluate',
+  'Excentricity', 'Execute', 'ExecuteBatch', 'Expand', 'Exponential', 'ExportImage',
+  'ExtendedGCD', 'Extremum', 'Factor', 'Factors', 'FDistribution', 'FillCells',
+  'FillColumn', 'FillRow', 'First', 'FirstAxis', 'FirstAxisLength', 'Fit',
+  'FitExp', 'FitGrowth', 'FitImplicit', 'FitLine', 'FitLineX', 'FitLineY',
+  'FitLog', 'FitLogistic', 'FitPoly', 'FitPow', 'FitSin', 'Flatten',
+  'Focus', 'FormulaText', 'FractionText', 'Frequency', 'FrequencyPolygon', 'FrequencyTable',
+  'FromBase', 'Function', 'FutureValue', 'Gamma', 'GCD', 'GeometricMean',
+  'GetTime', 'GroebnerDegRevLex', 'GroebnerLex', 'GroebnerLexDeg', 'HarmonicMean', 'Height',
+  'HideLayer', 'Histogram', 'HistogramRight', 'Hull', 'Hyperbola', 'HyperGeometric',
+  'Icosahedron', 'Identity', 'If', 'IFactor', 'ImplicitCurve', 'ImplicitDerivative',
+  'ImplicitSurface', 'Incircle', 'IndexOf', 'InfiniteCone', 'InfiniteCylinder', 'InflectionPoint',
+  'InputBox', 'Insert', 'Integral', 'IntegralBetween', 'IntegralSymbolic', 'InteriorAngles',
+  'Intersect', 'IntersectCircle', 'IntersectConic', 'Intersection', 'IntersectionPaths', 'IntersectPath',
+  'IntersectRegion', 'InverseBeta', 'InverseBinomial', 'InverseBinomialMinimumTrials', 'InverseCauchy', 'InverseChiSquared',
+  'InverseExponential', 'InverseFDistribution', 'InverseGamma', 'InverseHyperGeometric', 'InverseLaplace', 'InverseLogistic',
+  'InverseLogNormal', 'InverseNormal', 'InversePascal', 'InversePoisson', 'InverseTDistribution', 'InverseWeibull',
+  'InverseZipf', 'Invert', 'IsDefined', 'IsFactored', 'IsInRegion', 'IsInteger',
+  'IsPrime', 'IsTangent', 'IsVertexForm', 'Iteration', 'IterationList', 'Join',
+  'JordanDiagonalization', 'KeepIf', 'Laplace', 'Last', 'LaTeX', 'LCM',
+  'LeftSide', 'LeftSum', 'Length', 'LetterToUnicode', 'Limit', 'LimitAbove',
+  'LimitBelow', 'Line', 'LinearEccentricity', 'LineBisector', 'LineGraph', 'Locus',
+  'LocusEquation', 'Logistic', 'LogNormal', 'LowerSum', 'LUDecomposition', 'MAD',
+  'MajorAxis', 'MatrixRank', 'Max', 'Maximize', 'Mean', 'MeanX',
+  'MeanY', 'Median', 'Midpoint', 'Min', 'MinimalPolynomial', 'Minimize',
+  'MinimumSpanningTree', 'MinorAxis', 'Mirror', 'MixedNumber', 'Mod', 'Mode',
+  'ModularExponent', 'Name', 'NDerivative', 'Net', 'NextPrime', 'NIntegral',
+  'NInvert', 'Normal', 'Normalize', 'NormalQuantilePlot', 'NSolutions', 'NSolve',
+  'NSolveODE', 'Numerator', 'Numeric', 'Object', 'Octahedron', 'Ordinal',
+  'OrdinalRank', 'OrthogonalLine', 'OrthogonalPlane', 'OrthogonalVector', 'OsculatingCircle', 'Pan',
+  'Parabola', 'Parameter', 'ParametricDerivative', 'ParseToFunction', 'ParseToNumber', 'PartialFractions',
+  'Pascal', 'PathParameter', 'Payment', 'PenStroke', 'Percentile', 'Perimeter',
+  'Periods', 'PerpendicularBisector', 'PerpendicularLine', 'PerpendicularPlane', 'PerpendicularVector', 'PieChart',
+  'Plane', 'PlaneBisector', 'PlaySound', 'PlotSolve', 'PMCC', 'Point',
+  'PointIn', 'PointList', 'Poisson', 'Polar', 'Polygon', 'Polyhedron',
+  'PolyLine', 'Polynomial', 'PresentValue', 'PreviousPrime', 'PrimeFactors', 'Prism',
+  'Product', 'Prove', 'ProveDetails', 'Pyramid', 'Q1', 'Q3',
+  'QRDecomposition', 'QuadricSide', 'Quartile1', 'Quartile3', 'Radius', 'Random',
+  'RandomBetween', 'RandomBinomial', 'RandomDiscrete', 'RandomElement', 'RandomNormal', 'RandomPointIn',
+  'RandomPoisson', 'RandomPolynomial', 'RandomUniform', 'Rate', 'Rationalize', 'Ray',
+  'ReadText', 'RectangleSum', 'ReducedRowEchelonForm', 'Reflect', 'Relation', 'RemovableDiscontinuity',
+  'Remove', 'RemoveUndefined', 'Rename', 'Repeat', 'ReplaceAll', 'ResidualPlot',
+  'Reverse', 'RightSide', 'RigidPolygon', 'Root', 'RootList', 'RootMeanSquare',
+  'Roots', 'Rotate', 'RotateText', 'Row', 'RSquare', 'RunClickScript',
+  'RunUpdateScript', 'Sample', 'SampleSD', 'SampleSDX', 'SampleSDY', 'SampleVariance',
+  'ScientificText', 'SD', 'SDX', 'SDY', 'SecondAxis', 'SecondAxisLength',
+  'Sector', 'Segment', 'SelectedElement', 'SelectedIndex', 'SelectObjects', 'Semicircle',
+  'SemiMajorAxisLength', 'SemiMinorAxisLength', 'Sequence', 'SetActiveView', 'SetAxesRatio', 'SetBackgroundColor',
+  'SetCaption', 'SetColor', 'SetConditionToShowObject', 'SetConstructionStep', 'SetCoords', 'SetDecoration',
+  'SetDynamicColor', 'SetFilling', 'SetFixed', 'SetImage', 'SetLabelMode', 'SetLayer',
+  'SetLevelOfDetail', 'SetLineOpacity', 'SetLineStyle', 'SetLineThickness', 'SetPerspective', 'SetPointSize',
+  'SetPointStyle', 'SetSeed', 'SetSpinSpeed', 'SetTooltipMode', 'SetTrace', 'SetValue',
+  'SetViewDirection', 'SetVisibleInView', 'Shear', 'ShortestDistance', 'ShowAxes', 'ShowGrid',
+  'ShowLabel', 'ShowLayer', 'Shuffle', 'Side', 'SigmaXX', 'SigmaXY',
+  'SigmaYY', 'Simplify', 'Slider', 'Slope', 'SlopeField', 'SlowPlot',
+  'Solutions', 'Solve', 'SolveCubic', 'SolveODE', 'SolveQuartic', 'Sort',
+  'Spearman', 'Sphere', 'Spline', 'Split', 'Stadium', 'StartAnimation',
+  'StartRecord', 'StemPlot', 'StepGraph', 'StickGraph', 'Stretch', 'Substitute',
+  'Sum', 'SumSquaredErrors', 'SurdText', 'Surface', 'SVD', 'SXX',
+  'SXY', 'SYY', 'TableText', 'TableToChart', 'Take', 'Tangent',
+  'TaylorPolynomial', 'TaylorSeries', 'TDistribution', 'Tetrahedron', 'Text', 'Textfield',
+  'TextToUnicode', 'TiedRank', 'TMean2Estimate', 'TMeanEstimate', 'ToBase', 'ToComplex',
+  'ToExponential', 'ToolImage', 'Top', 'ToPoint', 'ToPolar', 'Translate',
+  'Transpose', 'TrapezoidalSum', 'TravelingSalesman', 'TriangleCenter', 'TriangleCurve', 'Triangular',
+  'TrigCombine', 'TrigExpand', 'TrigSimplify', 'Trilinear', 'TTest', 'TTest2',
+  'TTestPaired', 'TurningPoint', 'Turtle', 'TurtleBack', 'TurtleDown', 'TurtleForward',
+  'TurtleLeft', 'TurtleRight', 'TurtleUp', 'Type', 'UnicodeToLetter', 'UnicodeToText',
+  'Uniform', 'Union', 'Unique', 'UnitOrthogonalVector', 'UnitPerpendicularVector', 'UnitVector',
+  'UpdateConstruction', 'UpperSum', 'Variance', 'Vector', 'Vertex', 'VerticalText',
+  'Volume', 'Voronoi', 'Weibull', 'Zip', 'Zipf', 'ZMean2Estimate',
+  'ZMean2Test', 'ZMeanEstimate', 'ZMeanTest', 'ZoomIn', 'ZoomOut', 'ZProportion2Estimate',
+  'ZProportion2Test', 'ZProportionEstimate', 'ZProportionTest',
+]
+
+/** Upper-cased name -> GeoGebra's own spelling. */
+export const COMMAND_INDEX = new Map(COMMANDS.map((name) => [name.toUpperCase(), name]))
